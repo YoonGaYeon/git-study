@@ -1,5 +1,8 @@
+/*
+Author insanehong~~~~`
+*/
 
-n compress(str) {
+function compress(str) {
   var repeat = 1;
     var result = str.charAt(0);
       var prev = result;
@@ -8,6 +11,7 @@ n compress(str) {
 	  
 	      if( str.charAt(i) === prev ) {
 	            repeat++;
+		    if(i === str.length -1) result += repeat;
 		        } else {
 			      if (repeat > 1) result += repeat;
 			            result += str.charAt(i);
